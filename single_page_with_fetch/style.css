@@ -1,0 +1,697 @@
+/*
+ * CSCI2720 Building Web Applications
+ *
+ * --- Declaration ---
+ *
+ * I declare that the assignment here submitted is original except
+ * for source material explicitly acknowledged. I also acknowledge
+ * that I am aware of University policy and regulations on honesty
+ * in academic work, and of the disciplinary guidelines and procedures
+ * applicable to breaches of such policy and regulations, as contained
+ * in the website: https//www.cuhk.edu.hk/policy/academichonesty/
+ *
+ * Assignment 1
+ * Name        : CHOI, Ka Hou
+ * Student ID  : 1155135747
+ * Email Addr  : 1155135747@link.cuhk.edu.hk
+ */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fredoka", sans-serif;
+}
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+p {
+  color: black;
+  font-size: 1.4rem;
+  margin-top: 5px;
+  line-height: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}
+.section-title {
+  font-size: 4rem;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+.section-title span {
+  color: rgb(20, 220, 210);
+}
+.brand {
+  padding-top: 10px;
+}
+.brand a {
+  text-decoration: none;
+}
+.brand h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
+}
+.brand h1 span {
+  color: rgb(20, 220, 210);
+}
+.align-able {
+  text-align: left;
+}
+
+/* Header section */
+header {
+  z-index: 1000;
+  position: fixed;
+  height: 7px;
+  width: 100%;
+  background-image: url(./img/header-bg.png);
+}
+#header {
+  position: fixed;
+  z-index: 500;
+  width: 100%;
+  height: auto;
+}
+#header .header-container {
+  margin-top: 7px;
+  min-height: 8vh;
+  background-color: rgba(31, 30, 30, 0.24);
+  transition: 0.5s ease background-color;
+}
+#header .nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  flex-direction: column;
+}
+#header .nav-list ul {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#header .nav-list ul a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 7px;
+  display: block;
+}
+#header .nav-list ul button {
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  display: block;
+  margin: 0 7px;
+  width: 80px;
+  padding: 7px 5px;
+}
+#header .nav-list ul li button[aria-pressed="true"] {
+  color: rgb(0, 0, 0);
+  background-color: white;
+}
+#header .nav-list ul li:hover button {
+  color: rgb(0, 0, 0);
+  background-color: white;
+}
+#header .nav-list ul li {
+  display: inline-block;
+  line-height: 0.5;
+}
+#header .nav-list ul li:hover a {
+  color: rgb(20, 220, 210);
+}
+#header .card-body {
+  height: 50px;
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+#header .card-body ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+#header .card-body li {
+  margin: 0 7px;
+}
+#header .card-body li button {
+  font-size: 0.8rem;
+  width: 100px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+#header .progress-container {
+  width: 100%;
+  height: 8px;
+  background: transparent;
+}
+#header .progress-bar {
+  height: 8px;
+  background: rgb(20, 220, 210);
+  width: 0%;
+}
+/* End Header section */
+
+/* Hero Section */
+#hero {
+  background-image: url(./img/hero-bg.png);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+#hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: -1;
+}
+#hero .hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+  justify-content: flex-start;
+}
+#hero h1 {
+  display: block;
+  width: fit-content;
+  font-size: 4rem;
+  position: relative;
+  color: transparent;
+  animation: text_reveal 0.5s ease forwards;
+  animation-delay: 1s;
+}
+#hero h1:nth-child(1) {
+  animation-delay: 1s;
+}
+#hero h1:nth-child(2) {
+  animation-delay: 2s;
+}
+#hero h1:nth-child(3) {
+  animation: text_reveal_name 0.5s ease forwards;
+  animation-delay: 3s;
+}
+#hero h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: rgb(20, 220, 210);
+  animation: text_reveal_box 1s ease;
+}
+#hero h1:nth-child(1) span {
+  animation-delay: 0.5s;
+}
+#hero h1:nth-child(2) span {
+  animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) span {
+  animation-delay: 2.5s;
+}
+/* End Hero Section */
+
+/* About Section */
+#about .about {
+  flex-direction: column-reverse;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+#about .col-left {
+  width: 250px;
+  height: 360px;
+}
+#about .col-right {
+  width: 100%;
+}
+#about .col-right h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  margin-bottom: 10px;
+}
+#about .col-right p {
+  margin-bottom: 20px;
+}
+#about .col-right ul li {
+  font-size: 1.4rem;
+  margin-left: 15px;
+}
+#about .col-left .about-img {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border: 10px solid white;
+}
+#about .col-left .about-img::after {
+  content: "";
+  position: absolute;
+  left: -33px;
+  top: 19px;
+  height: 98%;
+  width: 98%;
+  border: 7px solid rgb(20, 220, 210);
+  z-index: -1;
+}
+/* End About Section */
+
+/* Study */
+#study .study {
+  flex-direction: column;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+#study .course-table {
+  max-width: 1000px;
+  width: 100%;
+}
+#study .course-table table th {
+  color: black;
+  font-size: 1.7rem;
+  margin-top: 5px;
+  line-height: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+  vertical-align: middle;
+}
+#study .course-table table td {
+  color: black;
+  font-size: 1.2rem;
+  margin-top: 5px;
+  line-height: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+  vertical-align: middle;
+}
+/* End Study */
+
+/* Projects section */
+#projects .projects {
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+#projects .projects-header h1 {
+  margin-bottom: 50px;
+}
+#projects .all-projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#projects .project-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#projects .project-info {
+  padding: 30px;
+  flex-basis: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  color: white;
+}
+#projects .project-info h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+#projects .project-info h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+#projects .project-info p {
+  color: white;
+}
+#projects .project-img {
+  flex-basis: 50%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#projects .project-img:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  opacity: 0.7;
+}
+#projects .project-img img {
+  transition: 0.3s ease transform;
+  height: 200px;
+  width: 100%;
+}
+#projects .project-item:hover .project-img img {
+  transform: scale(1.1);
+}
+/* End Projects section */
+
+/* Comments Section */
+#comments .comments {
+  flex-direction: column;
+  text-align: center;
+  width: fit-content;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+#comments .comments #comments-content {
+  font-size: 1.5rem;
+  text-align: left;
+  margin-top: 20px;
+}
+#comments .comments #comments-content #comments-ol {
+  height: fit-content;
+  flex-direction: column;
+  max-width: 700px;
+  word-wrap: break-word;
+}
+#comments .comments #comments-content #comments-ol h5 {
+  padding: 17px 10px;
+  color: gray;
+}
+#comments .comments #comments-content .comments-text {
+  height: fit-content;
+  border-left: 5px solid #29323c;
+  border-radius: 3px;
+  padding: 0px 10px;
+  margin: 0px 22.5px;
+}
+#comments .comments #comments-content h6 {
+  font-size: 1.5rem;
+}
+#comments .comments #comments-content form {
+  font-size: 1.3rem;
+}
+#comments .comments #comments-content form * {
+  margin: 7px 3px 0px 3px;
+  font-size: 1.3rem;
+}
+#comments .comments #comments-content form .form-check {
+  display: flex;
+  column-gap: 20px;
+}
+#comments .comments #comments-content form .form-check div input {
+  display: table-cell;
+  vertical-align: middle;
+  margin: 3px;
+  margin-left: -10px;
+}
+#comments .comments #comments-content form .form-check div label {
+  margin: 0px 10px;
+}
+/* End Comments Section */
+
+/* Responsiveness Section */
+#responsiveness .responsiveness {
+  flex-direction: column;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+#responsiveness .responsiveness img{
+  width: 70%;
+  height: auto;
+  max-width: 500px;
+}
+/* End Responsiveness Section */
+
+/* Footer */
+#footer {
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+#footer .footer {
+  min-height: 200px;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#footer h2 {
+  text-align: center;
+  color: white;
+  font-weight: 100;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 10px;
+}
+#footer p {
+  color: white;
+  font-size: 1.3rem;
+}
+/* End Footer */
+
+/* Animations */
+.translate {
+  animation: 2s fadeIn;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+  0% {
+    max-height: 0;
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    max-height: 20rem;
+    opacity: 1;
+  }
+}
+@keyframes text_reveal_box {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes text_reveal {
+  100% {
+    color: white;
+  }
+}
+@keyframes text_reveal_name {
+  100% {
+    color: rgb(20, 220, 210);
+    font-weight: 500;
+  }
+}
+/* End Animations */
+
+/* >=550px */
+@media only screen and (min-width: 550px) {
+  h1.section-title {
+    font-size: 6rem;
+  }
+
+  #header .nav-list ul a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 12px;
+    display: block;
+  }
+  #header .nav-list ul button {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 10px;
+    width: 120px;
+  }
+
+  #header .card-body ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+  }
+  #header .card-body li {
+    margin: 0 15px;
+  }
+  #header .card-body li button {
+    width: 120px;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+
+  #hero h1 {
+    font-size: 7rem;
+  }
+
+  #about .about {
+    flex-direction: row;
+  }
+  #about .col-left {
+    width: 600px;
+    height: 400px;
+    padding-left: 60px;
+  }
+  #about .about .col-left .about-img::after {
+    left: -45px;
+    top: 34px;
+    height: 98%;
+    width: 98%;
+    border: 10px solid rgb(20, 220, 210);
+  }
+  #about .col-right {
+    text-align: left;
+    padding: 30px;
+  }
+  #about .col-right h1 {
+    text-align: left;
+  }
+
+  #projects .project-item {
+    flex-direction: row;
+  }
+  #projects .project-item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  #projects .project-item {
+    height: 400px;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+  #projects .all-projects .project-info {
+    height: 100%;
+  }
+  #projects .all-projects .project-img {
+    height: 100%;
+    width: 100%;
+  }
+  #projects .project-img img {
+    height: 100%;
+    width: 100%;
+  }
+}
+/* End >=550px */
+
+/* >=1200px */
+@media only screen and (min-width: 1200px) {
+  #header .nav-list ul a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+  }
+  #header .nav-list ul button {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 10px;
+    width: 150px;
+  }
+
+  .card-body ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+  }
+  .card-body li {
+    margin: 0 15px;
+  }
+  .card-body li button {
+    font-size: 1rem;
+    width: 150px;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+
+  #study .course-table table th {
+    font-size: 1.7rem;
+    margin-top: 5px;
+    line-height: 3rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+  }
+  #study .course-table table td {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    line-height: 3rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+  }
+
+  #projects .project-img img {
+    height: 100%;
+    width: 100%;
+  }
+}
+/* End >=1200px */

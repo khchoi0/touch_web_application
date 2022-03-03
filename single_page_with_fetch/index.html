@@ -1,0 +1,454 @@
+<!-- /*
+ * CSCI2720 Building Web Applications
+ *
+ * --- Declaration ---
+ *
+ * I declare that the assignment here submitted is original except
+ * for source material explicitly acknowledged. I also acknowledge
+ * that I am aware of University policy and regulations on honesty
+ * in academic work, and of the disciplinary guidelines and procedures
+ * applicable to breaches of such policy and regulations, as contained
+ * in the website: https//www.cuhk.edu.hk/policy/academichonesty/
+ *
+ * Assignment 1
+ * Name        : CHOI, Ka Hou
+ * Student ID  : 1155135747
+ * Email Addr  : 1155135747@link.cuhk.edu.hk
+ */ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CHOI, Ka Hou | CS Student | CUHK</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <section id="header">
+        <div class="header-container">
+          <div class="nav-bar">
+            <div class="brand">
+              <a href="#hero">
+                <h1><span>C</span>hoi <span>K</span>a <span>H</span>ou</h1>
+              </a>
+            </div>
+            <div class="nav-list">
+              <ul>
+                <li><a href="#about" data-after="About">About</a></li>
+                <li><a href="#study" data-after="Study">Study</a></li>
+                <li><a href="#projects" data-after="Projects">Projects</a></li>
+                <li><a href="#comments" data-after="Comments">Comments</a></li>
+                <li>
+                  <span data-toggle="button">
+                    <button
+                      type="button"
+                      class="btn btn-outline-light btn-lg btn-block"
+                      data-toggle="collapse"
+                      data-target="#specialToggle"
+                      aria-expanded="false"
+                      aria-controls="specialToggle"
+                    >
+                      Special!!
+                    </button>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="collapse" id="specialToggle">
+          <div class="card card-body">
+            <ul>
+              <li>
+                <button
+                  id="align-button"
+                  type="button"
+                  class="btn btn-outline-dark"
+                >
+                  Align
+                </button>
+              </li>
+              <li>
+                <button
+                  id="new-hobby-button"
+                  type="button"
+                  class="btn btn-outline-dark"
+                >
+                  New Hobby
+                </button>
+              </li>
+              <li>
+                <span data-toggle="button">
+                  <button
+                    type="button"
+                    class="btn btn-outline-dark"
+                    data-toggle="collapse"
+                    data-target="#scrollProgressDiv"
+                    aria-expanded="false"
+                    aria-controls="scrollProgressDiv"
+                  >
+                    Scroll
+                  </button>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="collapse" id="scrollProgressDiv">
+          <div class="progress-bar" id="scrollProgressBar"></div>
+        </div>
+      </section>
+    </header>
+    <!-- End Header -->
+
+    <!-- Hero Section  -->
+    <section id="hero">
+      <div class="hero container">
+        <div>
+          <h1>Hello, <span></span></h1>
+          <h1>My Name is <span></span></h1>
+          <h1>CHOI, Ka Hou <span></span></h1>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero Section  -->
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="about container">
+        <div class="col-left">
+          <div class="about-img">
+            <img src="./img/portrait.png" alt="img" />
+          </div>
+        </div>
+        <div class="col-right">
+          <h1 class="section-title">About <span>me</span></h1>
+          <h2 class="align-able">Computer Science Student</h2>
+          <p class="align-able">
+            Keen on digging into the logic behind things, would feel satisfied
+            when projects finishes thoroughly. My ambition is trying to be the
+            team member who builds tools for the society and at the same time
+            avoiding potential risks brought by the tools I would have built.
+          </p>
+          <h2 class="align-able">My Hobbies</h2>
+          <ul id="hobby-ul" class="align-able">
+            <li>Reading</li>
+            <li>Bicycle</li>
+            <li>Ultimate Frisbee</li>
+            <li>Playing the piano</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- Study -->
+    <section id="study">
+      <div class="study container">
+        <div>
+          <h1 class="section-title">Stud<span>y</span></h1>
+        </div>
+        <div class="course-table">
+          <table class="table table-lg">
+            <colgroup>
+              <col span="1" style="width: 50%" />
+              <col span="1" style="width: 50%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">Course Code</th>
+                <th scope="col">Course Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CSCI2100</td>
+                <td class="align-able">Data Structures</td>
+              </tr>
+              <tr>
+                <td>CSCI3100</td>
+                <td class="align-able">Software Engineering</td>
+              </tr>
+              <tr>
+                <td>CSCI3150</td>
+                <td class="align-able">Introduction to Operating Systems</td>
+              </tr>
+              <tr>
+                <td>CSCI3160</td>
+                <td class="align-able">Design & Analysis of Algorithms</td>
+              </tr>
+              <tr>
+                <td>CSCI3710</td>
+                <td class="align-able">Introduction to Database Systems</td>
+              </tr>
+              <tr>
+                <td>CSCI3230</td>
+                <td class="align-able">
+                  Fundamentals of Artificial Intelligence
+                </td>
+              </tr>
+              <tr>
+                <td>CSCI3320</td>
+                <td class="align-able">Fundamentals of Machine Learning</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- End Study -->
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="projects container">
+        <div class="projects-header">
+          <h1 class="section-title">Recent <span>Projects</span></h1>
+        </div>
+        <div class="all-projects align-able">
+          <div class="project-item">
+            <div class="project-info">
+              <h1>Project 1</h1>
+              <h2>Web Application Development</h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad,
+                iusto cupiditate voluptatum impedit unde rem ipsa distinctio
+                illum quae mollitia ut, accusantium eius odio ducimus illo neque
+                atque libero non sunt harum? Ipsum repellat animi, fugit
+                architecto voluptatum odit et!
+              </p>
+            </div>
+            <div class="project-img">
+              <img src="./img/proj-1.png" alt="img" />
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-info">
+              <h1>Project 2</h1>
+              <h2>Data Structrues & Algorithms in Java</h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad,
+                iusto cupiditate voluptatum impedit unde rem ipsa distinctio
+                illum quae mollitia ut, accusantium eius odio ducimus illo neque
+                atque libero non sunt harum? Ipsum repellat animi, fugit
+                architecto voluptatum odit et!
+              </p>
+            </div>
+            <div class="project-img">
+              <img src="./img/proj-2.png" alt="img" />
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-info">
+              <h1>Project 3</h1>
+              <h2>Library Database with MySQL</h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad,
+                iusto cupiditate voluptatum impedit unde rem ipsa distinctio
+                illum quae mollitia ut, accusantium eius odio ducimus illo neque
+                atque libero non sunt harum? Ipsum repellat animi, fugit
+                architecto voluptatum odit et!
+              </p>
+            </div>
+            <div class="project-img">
+              <img src="./img/proj-3.png" alt="img" />
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-info">
+              <h1>Project 4</h1>
+              <h2>CIFAR-100 Classification Problem</h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad,
+                iusto cupiditate voluptatum impedit unde rem ipsa distinctio
+                illum quae mollitia ut, accusantium eius odio ducimus illo neque
+                atque libero non sunt harum? Ipsum repellat animi, fugit
+                architecto voluptatum odit et!
+              </p>
+            </div>
+            <div class="project-img">
+              <img src="./img/proj-4.png" alt="img" />
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-info">
+              <h1>Project 5</h1>
+              <h2>Prediction Model for Crude Oil Pricing</h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad,
+                iusto cupiditate voluptatum impedit unde rem ipsa distinctio
+                illum quae mollitia ut, accusantium eius odio ducimus illo neque
+                atque libero non sunt harum? Ipsum repellat animi, fugit
+                architecto voluptatum odit et!
+              </p>
+            </div>
+            <div class="project-img">
+              <img src="./img/proj-5.png" alt="img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Projects Section -->
+
+    <!-- Comment Section -->
+    <section id="comments">
+      <div class="comments container">
+        <div>
+          <h1 class="section-title"><span>Com</span>ments</h1>
+        </div>
+        <div id="comments-content">
+          <div id="comments-ol"></div>
+          <div id="form-section">
+            <hr />
+            <h6>Add your comment:</h6>
+            <form>
+              <div>
+                <label for="new-email" class="form-label">Email address</label>
+                <input
+                  type="email"
+                  class="form-control align-able"
+                  id="new-email"
+                  placeholder="name@example.com"
+                />
+              </div>
+              <div>
+                <label for="new-comment" class="form-label">Comment</label>
+                <textarea
+                  class="form-control align-able"
+                  id="new-comment"
+                  rows="3"
+                  maxlength="300"
+                ></textarea>
+              </div>
+              <div class="form-check">
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="new-color"
+                    id="new-color-red"
+                    value="Crimson"
+                    checked
+                  />
+                  <label class="form-check-label" for="new-color-red"
+                    >Red</label
+                  >
+                </div>
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="new-color"
+                    id="new-color-green"
+                    value="MediumSpringGreen"
+                  />
+                  <label class="form-check-label" for="new-color-green"
+                    >Green</label
+                  >
+                </div>
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="new-color"
+                    id="new-color-yellow"
+                    value="Gold"
+                  />
+                  <label class="form-check-label" for="new-color-yellow"
+                    >Yellow</label
+                  >
+                </div>
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="new-color"
+                    id="new-color-blue"
+                    value="DeepSkyBlue"
+                  />
+                  <label class="form-check-label" for="new-color-blue"
+                    >Blue</label
+                  >
+                </div>
+              </div>
+              <button
+                type="button"
+                class="btn btn-outline-dark"
+                id="comment-submit-button"
+              >
+                Add comment
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Comment Section -->
+
+    <!-- Responsiveness Section -->
+    <section id="responsiveness">
+      <div class="responsiveness container">
+        <div>
+          <h1 class="section-title"><span>Res</span>ponsiveness</h1>
+        </div>
+        <div id="responsiveness-content">
+          <img src="./img/responsiveness.png" alt="responsiveness">
+          <p class="align-able"">The responsiveness of this website is mainly implemented in three sections: the navbar, about, and projects. The responsive features are shown with different font sizes, paddings, margins, flex columns to flex rows, and grid canvas to cards. This website is responsive to three kinds of devices: desktop computers, tablets, and smartphones.</p>
+        </div>
+      </div>
+    </section>
+    <!-- End Responsiveness Section -->
+
+    <!-- Footer -->
+    <section id="footer">
+      <div class="footer container">
+        <div class="brand">
+          <h1><span>C</span>hoi <span>K</span>a <span>H</span>ou</h1>
+        </div>
+        <h2>
+          The Chinese University of Hong Kong<br />
+          Computer Science Student<br />
+        </h2>
+        <p>Copyright &copy; 2022 Choi. All rights reserved</p>
+      </div>
+    </section>
+    <!-- End Footer -->
+    <script src="./app.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+    <div id="c1001">
+      <div class="d-flex">
+        <svg height="50" width="50">
+          <circle cx="25" cy="25" r="20" fill="MediumSpringGreen"></circle>
+        </svg>
+        <h5>chuckjee@cse.cuhk.edu.hk</h5>
+      </div>
+      <div>
+        <div class="comments-text">
+          <p class="align-able">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Ad, iusto cupiditate voluptatum impedit unde rem ipsa
+            distinctio illum quae mollitia ut, accusantium eius odio
+            ducimus illo neque atque libero non sunt harum?
+          </p>
+        </div>
+      </div>
+      <hr class="rounded">
+    </div>
+    <div id="c1002">
+      <div class="d-flex">
+        <svg height="50" width="50">
+          <circle cx="25" cy="25" r="20" fill="Crimson"></circle>
+        </svg>
+        <h5>chuckjee@cse.cuhk.edu.hk</h5>
+      </div>
+      <div>
+        <div class="comments-text">
+          <p class="align-able">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Ad, iusto cupiditate voluptatum impedit unde rem ipsa
+            distinctio illum quae mollitia ut, accusantium eius odio
+            ducimus illo neque atque libero non sunt harum?
+          </p>
+        </div>
+      </div>
+      <hr class="rounded">
+    </div>
+    <div id="c1003">
+      <div class="d-flex">
+        <svg height="50" width="50">
+          <circle cx="25" cy="25" r="20" fill="Gold"></circle>
+        </svg>
+        <h5>chuckjee@cse.cuhk.edu.hk</h5>
+      </div>
+      <div>
+        <div class="comments-text">
+          <p class="align-able">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Ad, iusto cupiditate voluptatum impedit unde rem ipsa
+            distinctio illum quae mollitia ut, accusantium eius odio
+            ducimus illo neque atque libero non sunt harum?
+          </p>
+        </div>
+      </div>
+      <hr class="rounded">
+    </div>
+    <div id="c1004">
+      <div class="d-flex">
+        <svg height="50" width="50">
+          <circle cx="25" cy="25" r="20" fill="DeepSkyBlue"></circle>
+        </svg>
+        <h5>chuckjee@cse.cuhk.edu.hk</h5>
+      </div>
+      <div>
+        <div class="comments-text">
+          <p class="align-able">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Ad, iusto cupiditate voluptatum impedit unde rem ipsa
+            distinctio illum quae mollitia ut, accusantium eius odio
+            ducimus illo neque atque libero non sunt harum?
+          </p>
+        </div>
+      </div>
+      <hr class="rounded">
+    </div>
